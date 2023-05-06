@@ -1,0 +1,250 @@
+/* RESET DO ESTILO DO NAVEGADOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTAINER COM TODO O CONTEUDO DA PÁGINA (como a página tá ocupando toda a largura isso, agora, é inútil) */
+.page-content{
+    width: 80%;
+    margin: 0 auto;
+
+    /* TRABALHANDO RESPONSÍVIDADE */
+    min-width: 320px;
+    max-width: 1920px;
+}
+
+/* DIV COM A IMAGEM DE FUNDO NO INÍCIO DA PÁGINA */
+.background-image {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+
+    height: 950px;
+
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+
+    width: 100%;
+}
+
+/*  DIV COM PARTE DE CIMA DA IMAGEM (CABEÇALHO E BOTÕES) */
+.top {
+    width: 100%;
+    position: fixed;
+}
+
+/* DIV DO CABEÇALHO */
+.header {
+    display: flex;
+    justify-content: center;
+
+    background-color: #C27274;
+
+    height: 100px;
+    width: 100%;
+
+    opacity: 0.9;
+}
+
+/* CONTAINER DO MENU */
+.menu-container{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* DIV COM OS BOTÕES */
+.menu {
+    display: flex;
+    width: 600px;
+}
+
+/* APARECIA DOS BOTÕES */
+.button {
+    background-color: #A63336;
+    color: #fff;
+
+    padding: 12px 30px;
+    margin: 0 20px;
+    height: 43px;
+    flex: 1;
+
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0px 5px 7px rgb(25, 25, 25);
+
+    transition: all 800ms ease;
+}
+
+/* MUDANÇA DE COR QUANDO  O MOUSE REPOUSA EM CIMA DO BOTÃO */
+.button:hover {
+    background-color: #d6696c;
+}
+
+/* MUDANDA A APARENCIA PADRÃO DO LINK */
+.button:link{
+    text-decoration: none;
+}
+
+/* CONTAINER COM A PARTE DE BAIXO DA IMAGEM (Faça Parte) */
+.bottom-container {
+    margin-top: auto; /* POSICIONA O FAÇO PARTE EM BAIXO DO CONTAINER */
+}
+
+/* DIV COM A IMAGEM E O BOTÃO DA PARTE DE BAIXO DA IMAGEM */
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom .button {
+    background-color: #FB5C5C;
+    width: 150px;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+/* O CÓDIGO ACIMA SUBSTITUI ESSE AQUI DE BAIXO */
+/*
+.faca-parte {
+    background-color: #A63336;
+
+    box-shadow: 0px 5px 7px rgb(71, 71, 71);
+    width: 150px;
+    margin-bottom: 10px;
+    align-self: center;
+} */
+
+/* IMAGEM FAÇA PARTE */
+.bottom-image {
+    /* NADA AQUI */
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    margin: 20px auto;
+
+    background-image: linear-gradient(to right, #FFF, #FB5C5C, #A63336, #A63336, #FB5C5C, #FFF);
+    /*box-shadow: 1px 1px 1px #252525;*/
+
+
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+}
+.grid {
+    display: flex;
+    justify-content: space-between;
+    /*width: 80%;*/
+    flex: 1;
+}
+.grid-item {
+    margin: 0 1.15%;
+    height: 300px;
+    flex: 1;
+
+    box-shadow: 4px 4px 4px rgb(24, 24, 24);
+
+    /*transition: all 60ms ease;*/
+}
+
+/*
+.grid-item:hover {
+    flex: 2;
+}*/
+
+.impact-phrase{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+    height: 550px;
+}
+
+.info-item {
+    width: 300px;
+
+    margin: 20px 20px;
+    flex: 1;
+}
+
+.info-item h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.info-item p {
+    text-align: justify;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.visao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1.5;
+}
+
+.imgae-visão img {
+    width: 100%;
+}
+
+.image-visao img {
+    height: 200px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.about {
+    display: flex;
+    width: 80%;
+    padding: 50px;
+    background-color: #C27274;
+}
+
+.about-text {
+    font-size: 20px;
+    padding: 0 30px;
+    text-align: justify;
+    background-color: #EDE4DB;
+    border-radius: 10px;
+}
+
+.about-image {
+    position: relative;
+    align-self: center;
+    left: 100px;
+
+}
+.about-image img{
+
+    box-shadow: 5px 5px 2px rgb(39, 39, 39);
+    width: 500px;
+}
