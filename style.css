@@ -13,10 +13,6 @@ body {
 .page-content{
     width: 80%;
     margin: 0 auto;
-
-    /* TRABALHANDO RESPONSÍVIDADE */
-    min-width: 320px;
-    max-width: 1920px;
 }
 
 /* DIV COM A IMAGEM DE FUNDO NO INÍCIO DA PÁGINA */
@@ -30,7 +26,7 @@ body {
     background-image: url(images/background.jpeg);
     background-size: cover;
 
-    width: 100%;
+    /*width: 100%;*/
 }
 
 /*  DIV COM PARTE DE CIMA DA IMAGEM (CABEÇALHO E BOTÕES) */
@@ -44,46 +40,51 @@ body {
     display: flex;
     justify-content: center;
 
-    background-color: #C27274;
+    background-color: #c27273c4; /*Adicionei opacidade aqui, assim a logo fica sólida*/
 
     height: 100px;
     width: 100%;
 
-    opacity: 0.9;
+    /*opacity: 0.9*/
 }
 
-/* CONTAINER DO MENU */
-.menu-container{
+/* MENU DE NAVEGAÇÃO */
+nav {
     display: flex;
-    margin-top: 10px;
     justify-content: center;
+    margin-top: 10px;
 }
 
-/* DIV COM OS BOTÕES */
-.menu {
+/* LISTA DESORDENADA COM O CONTAINER DOS BOTÕES */
+nav > ul {
     display: flex;
     width: 600px;
 }
 
-/* APARECIA DOS BOTÕES */
-.button {
-    background-color: #A63336;
-    color: #fff;
-
-    padding: 12px 30px;
-    margin: 0 20px;
-    height: 43px;
+/* CONTANER DOS BOTÕES COM OS BOTÕES */
+ul > li {
+    display: flex;
     flex: 1;
+    margin: 0 10px;
+
+}
+
+.botao {
+    background-color: #A63336;
+    color: #FFF;
 
     text-align: center;
-    border-radius: 30px;
-    box-shadow: 0px 5px 7px rgb(25, 25, 25);
+    flex: 1;
+    padding: 12px 0px;
+
+    border-radius: 40px;
+    box-shadow: 3px 3px 5px #25252581;
 
     transition: all 800ms ease;
 }
 
 /* MUDANÇA DE COR QUANDO  O MOUSE REPOUSA EM CIMA DO BOTÃO */
-.button:hover {
+.botao:hover {
     background-color: #d6696c;
 }
 
