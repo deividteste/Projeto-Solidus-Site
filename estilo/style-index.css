@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap');
+
+:root {
+    
+    --cor1: #FBFBFB;
+    --cor2: #F0CECE;
+    --cor3: #C27274;
+    --cor4: #FB5C5C;
+}
+
+/* RESET DO ESTILO DO NAVEGADOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LINHA HORIZONTAL ESTILIZADA*/
+hr {
+    border: 0;
+    height: 3px;
+    margin: 20px auto;
+    background-color: var(--cor3);
+    width: 60%;
+    /*background-image: linear-gradient(to right, #FFF, var(--cor2), var(--cor2), var(--cor2), #FFF);*/
+}
+
+/* HERO SECTION DA PÁGINA NO CELULAR*/
+@media screen and (max-width: 480px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 100vh;
+
+        /* ALTERAÇÃO NO TAMANHO DA FOTO */
+        background-image: url(../imagens/hero-section-brackground-branco-celular.jpeg);
+        background-size: cover;
+    }
+}
+
+/* HERO SECTION DA PÁGINA NO TABLET*/
+@media screen and (min-width: 480px) and (max-width: 1024px){
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 100vh;
+
+        /* ALTERAÇÃO NO TAMANHO DA FOTO */
+        background-image: url(../imagens/hero-section-brackground-branco-tablet.jpeg);
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 100vh;
+
+        /*LTERAÇÃO NO TAMANHO DA FOTO*/
+        background-image: url(../imagens/hero-section-brackground-branco-desktop.jpeg);
+        background-size: cover;
+    }
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    /*background-color: var(--cor4);*/
+
+    /*background-image: linear-gradient(to bottom, #f24b51 , #bf3b3fc5, #a6333700);*/
+    background-color: #c27273bb;
+
+    height: 15vh;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ESTILO DO NAVBAR NO CELULAR */
+@media only screen and (max-width: 640px){
+    nav > ul {
+        width: 40vw;
+    }
+
+    /* CONTANER DOS BOTÕES COM OS BOTÕES */
+    ul > li {
+        display: flex;
+        height: 2em;
+        flex: 1;
+        align-items: center;
+        margin: 4vw 10px; /* CELULAR */
+    }
+}
+
+/* ESTILO DO NAVBAR NO TABLET */
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+    nav > ul {
+        display: flex;
+        justify-content: center; /* TABLET */
+        width: 45vw;
+    }
+
+    /* CONTANER DOS BOTÕES COM OS BOTÕES */
+    ul > li {
+        display: flex;
+        height: 2em;
+        flex: 1;
+        align-items: center;
+        margin: 10px 3px; /* TABLET */
+    }
+}
+
+/* ESTILO DO NAVBAR NO DESKTOP */
+@media only screen and (min-width: 1024px) {
+    nav > ul {
+        display: flex;
+        justify-content: center; /* DESKTOP */
+        width: 35vw;
+    }
+
+    /* CONTANER DOS BOTÕES COM OS BOTÕES */
+    ul > li {
+        display: flex;
+        height: 2em;
+        flex: 1;
+        align-items: center;
+        margin: 10px 3px; /* DESKTOP */
+    }
+
+    .botao:hover {
+        background-color: #a86364;
+    }
+}
+
+.botao {
+    flex: 1;
+    font: 10pt 'Poppins';
+    text-align: center;
+
+    background-color: var(--cor3);
+    color: #FFF;
+
+    padding: 0.7em 0;
+    border-radius: 2em;
+    box-shadow: 3px 3px 5px #25252581;
+
+    transition: all 800ms ease;
+}
+
+/* REMOVENDO A DECORAÇÃO PADRÃO DE TODOS OS LINKS */
+.botao:link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hero-section-parte-baixo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.hero-section-parte-baixo > h1 {
+    text-align: center;
+    color: #252525;
+    font: bold 3em 'Dancing Script';
+}
+.hero-section-parte-baixo > a {
+    width: 280px;
+    align-self: center;
+    background-color: var(--cor4);
+}
+
+main {
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* GRID DE FOTOS DA PÁGINA NO CELULAR*/
+@media only screen and (max-width: 480px){
+    .grid > img {
+        margin: 5px auto;
+        box-shadow: 2px 2px 9px #252525a9;
+
+        width: 80%;
+        /*transition: all 60ms ease;*/
+        z-index: 2;
+    }
+} 
+
+/* GRID DE FOTOS DA PÁGINA NO TABLET*/
+@media only screen and (min-width: 480px) and (max-width: 1024px){
+    .grid > img {
+        width: 40%;
+        margin: 5px 1.15%;
+        box-shadow: 4px 4px 9px #252525a6;
+        z-index: 2;
+
+    }
+} 
+
+/* GRID DE FOTOS DA PÁGINA NO DESKTOP*/
+@media only screen and (min-width: 1024px){
+    .grid > img {
+        width: 30%;
+        height: 270px;
+
+        margin: 5px 1.15%;
+        z-index: 2;
+
+        object-fit: cover;
+        object-position: 0 -10px; /* MOVE A FOTO DENTRO DO CONTAINER SEM REDIMENSIONA-LA, LEFT TOP*/
+    }
+}
+
+/* TRAÇO ATRÁS DO GRID DE FOTOS */
+.fita {
+    height: 100px;
+    width: 100%;
+    background-color: var(--cor3);
+    
+    position: absolute;
+    top: 40%;
+
+    z-index: 1;
+}
+
+.frase-impacto {
+    margin-top: 10px;
+    font: italic bold 2em 'Poppins', sans-serif;
+    color: var(--cor3);
+    text-align: center;
+}
+
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+/* GRID DE INFOS (MISSÃO, VISÃO E VALORES) DA PÁGINA NO CELULAR */
+@media only screen and (max-width: 480px){
+    .info-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .visao {
+        align-self: flex-end;
+    }
+
+    .visao > img {
+        display: none;
+    }
+} 
+
+/* GRID DE INFOS (MISSÃO, VISÃO E VALORES) DA PÁGINA NO TABLET */
+@media only screen and (min-width: 480px) and (max-width: 1024px){
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 60px 0;
+
+    }
+    .visao {
+        align-self: flex-end;
+    }
+
+    .visao > img {
+        display: none;
+    }
+} 
+
+ /* GRID DE CARD DA PÁGINA NO DESKTOP */
+@media only screen and (min-width: 1024px){
+    .info-container {
+        display: flex;
+        flex-direction: row;
+    
+        max-width: 70%;
+        max-height: 500px;
+    
+        margin: 10px 0 100px 0;
+    }
+}
+
+/* CARTAO DE INFORMACOES */
+.cartao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1;
+
+    margin: 5px 10px;
+    padding: 20px;
+
+    box-shadow: 4px 4px 5px #2525258c;
+    border-radius: 10px;
+}
+
+.cartao > h1 {
+    text-align: center;
+    color: var(--cor3);
+    font: 3vh 'Poppins';
+
+}
+
+.cartao > p {
+    text-align: justify;
+    font: 10pt 'Poppins';
+
+}
+
+/* CARTÃO DE INFO MISSÃO */
+.missao {
+    background-image: url(../imagens/img1-branco.jpeg);
+    background-size: cover;
+
+}
+
+/* CARTÃO DE INFO VISÃO */
+.visao {
+    display: flex;
+    background-color: var(--cor1);
+    justify-content: flex-start;
+}
+
+.visao img {
+    align-self: center;
+    width: 80%;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+/* CARTÃO DE INFO VALORES */
+.valores {
+    background-image: url(../imagens/img3-branco.jpeg);
+    background-size: cover;
+    
+}
+
+/* SOBRE NÓS NO CELULAR E TABLET */
+@media screen and (max-width: 1024px) {
+    .sobre-nos {
+        background-color: var(--cor2);
+        
+        box-shadow: 4px 4px 7px #2525258f;
+
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .sobre-nos-img {
+        display: none;
+    }
+}
+
+/* SOBRE NÓS NO DESKTOP */
+@media screen and (min-width: 1024px){
+    .sobre-nos {
+        display: flex;
+        justify-content: center;
+        background-color: var(--cor2);
+
+        margin-bottom: 20px;
+    }
+
+    .sobre-nos-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sobre-nos-texto {
+        max-width: 700px;
+
+        padding: 20px 10px;
+    }
+
+    .sobre-nos-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 450px;
+        max-height: 650px;
+
+    }
+
+    .sobre-nos-img > img {
+        width: 80%;
+        box-shadow: 4px -4px 4px #ac9595b2;
+        border-radius: 5px;
+    }
+}
+
+.sobre-nos h1 {
+    font: 3em 'Poppins';
+    color: var(--cor4);
+    padding: 10px 0;
+}
+
+.sobre-nos p {
+    font-family: 'Poppins';
+    text-align: justify;
+    padding: 0 20px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--cor3); /*Adicionei opacidade aqui, assim a logo fica sólida*/
+    height: 15vh;
+
+    /*background-image: linear-gradient(to bottom, var(--cor2), var(--cor3), var(--cor4));*/
+}
