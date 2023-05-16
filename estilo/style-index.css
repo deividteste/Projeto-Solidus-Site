@@ -145,6 +145,7 @@ nav {
     }
 }
 
+/* ESTILO GENÉRICO PARA BOTÕES */
 .botao {
     flex: 1;
     font: 10pt 'Poppins';
@@ -195,7 +196,6 @@ main {
     position: relative;
 }
 
-
 /* GRID DE FOTOS DA PÁGINA NO CELULAR*/
 @media only screen and (max-width: 480px){
     .grid > img {
@@ -222,8 +222,7 @@ main {
 /* GRID DE FOTOS DA PÁGINA NO DESKTOP*/
 @media only screen and (min-width: 1024px){
     .grid > img {
-        width: 30%;
-        height: 270px;
+        width: 25%;
 
         margin: 5px 1.15%;
         z-index: 2;
@@ -235,8 +234,9 @@ main {
 
 /* TRAÇO ATRÁS DO GRID DE FOTOS */
 .fita {
-    height: 100px;
     width: 100%;
+    height: 100px;
+
     background-color: var(--cor3);
     
     position: absolute;
@@ -279,8 +279,8 @@ main {
         display: flex;
         flex-direction: column;
         margin: 10px 0 60px 0;
-
     }
+
     .visao {
         align-self: flex-end;
     }
@@ -290,7 +290,7 @@ main {
     }
 } 
 
- /* GRID DE CARD DA PÁGINA NO DESKTOP */
+ /* GRID DE INFOS DA PÁGINA NO DESKTOP */
 @media only screen and (min-width: 1024px){
     .info-container {
         display: flex;
@@ -328,14 +328,12 @@ main {
 .cartao > p {
     text-align: justify;
     font: 10pt 'Poppins';
-
 }
 
 /* CARTÃO DE INFO MISSÃO */
 .missao {
     background-image: url(../imagens/img1-branco.jpeg);
     background-size: cover;
-
 }
 
 /* CARTÃO DE INFO VISÃO */
@@ -347,16 +345,20 @@ main {
 
 .visao img {
     align-self: center;
-    width: 80%;
     margin: 25px 0;
     border-radius: 5px;
+
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 -40px;
+
 }
 
 /* CARTÃO DE INFO VALORES */
 .valores {
     background-image: url(../imagens/img3-branco.jpeg);
-    background-size: cover;
-    
+    background-size: cover; 
 }
 
 /* SOBRE NÓS NO CELULAR E TABLET */
@@ -390,10 +392,19 @@ main {
         flex-direction: row;
     }
 
-    .sobre-nos-texto {
+    .sobre-nos-conteudo {
         max-width: 700px;
-
         padding: 20px 10px;
+    }
+
+    .sobre-nos-cabecalho {
+        display: flex;
+        justify-content: center;
+
+        position: absolute;
+
+        width: 100vw;
+        height: 100px;
     }
 
     .sobre-nos-img {
@@ -402,11 +413,11 @@ main {
         justify-content: center;
         max-width: 450px;
         max-height: 650px;
-
     }
 
     .sobre-nos-img > img {
-        width: 80%;
+        width: 100%;
+        height: 400px;
         box-shadow: 4px -4px 4px #ac9595b2;
         border-radius: 5px;
     }
@@ -424,12 +435,33 @@ main {
     padding: 0 20px;
 }
 
-footer div {
+
+footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-    background-color: var(--cor3); /*Adicionei opacidade aqui, assim a logo fica sólida*/
-    height: 15vh;
+    position: relative;
 
-    /*background-image: linear-gradient(to bottom, var(--cor2), var(--cor3), var(--cor4));*/
+    font-family: 'Poppins';
+    background-color: #C27274;
+}
+
+footer > img {
+    width: 100px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+    
+    position: absolute;
+
+    top: 40px;
+    left: 0;
+    margin-left: 20px;
+}
+
+.redes-sociais img {
+    width: 60px;
 }
